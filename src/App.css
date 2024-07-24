@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  /* border: .5rem solid lightgreen; */
 }
 
 .logo {
@@ -10,9 +11,22 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  outline: .25rem solid black;
+  border-radius: 100rem 1rem;
+  background: conic-gradient(from 40deg, green -15%, forestgreen 1%, chartreuse, forestgreen, yellowgreen 96%, white 99%);
+  color: yellow;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 3rem;
+  /* width: 50dvw; */
+  aspect-ratio: .735;
+  rotate: 5deg;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  animation: logo-spin 1s 1;
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -31,6 +45,20 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+body {
+  background: skyblue;
+}
+
+main#main-main {
+  background: #fff4;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  text-shadow: 0 0 .1rem black;
 }
 
 .card {
@@ -67,6 +95,7 @@ li:hover {
 a {
   text-decoration: none;
   color: blue;
+  -webkit-text-stroke: .01rem black;
 }
 
 a:hover {
@@ -78,10 +107,19 @@ input {
   padding: .5rem;
   font-weight: bold;
   text-align: center;
+  border-radius: 5rem;
+}
+
+input:focus {
+  background: blue;
+  outline: .2rem double white;
 }
 
 label {
   margin: 0 .5rem;
+  font-weight: bold;
+  cursor: text;
+  text-shadow: 0 0 .1rem black;
 }
 
 div {
@@ -92,6 +130,7 @@ div {
 
 button {
   margin: 0 .5rem;
+  margin-top: 1rem;
   background: radial-gradient(white, gray);
   color: black;
   aspect-ratio: 1;
@@ -99,14 +138,14 @@ button {
   width: 5rem;
   font-size: 1rem;
   font-weight: bold;
-  border: .2rem solid white;
+  border: .2rem groove white;
 }       
 
 button:hover, button:focus {
   text-decoration: underline;
   background: conic-gradient(from -90deg, chartreuse, cyan 65%);
   cursor: pointer;
-  border: .2rem solid pink;
+  border: .2rem ridge pink;
 }
 
 button:disabled {

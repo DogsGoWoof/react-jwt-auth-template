@@ -11,12 +11,12 @@ import SigninForm from './components/SigninForm/SigninForm'
 import * as authService from '../src/services/authService'; // import the authservice
 
 export const AuthedUserContext = createContext(null); // set the initial value of the context to null
-    // creates a wrapper component and sets a dependent value
+// creates a wrapper component and sets a dependent value
 
 import './App.css';
 
 const App = () => {
-  
+
   // const [user, setUser] = useState(null);
   // const [user, setUser] = useState({ username: 'Shawn Doe' });
   const [user, setUser] = useState(authService.getUser()); // using the method from authservice
@@ -27,22 +27,25 @@ const App = () => {
   }
 
   return (
-    <AuthedUserContext.Provider value={user}>
-      {/* prop of value={object} to be grabbed by useContext in nested components */}
-      {/* <NavBar user={user} /> */}
-      <NavBar handleSignout={handleSignout} /> {/* pass the logout functionality to the navbar */}
-        {/* user={user} // no longer necessary in NavBar and Dashboard due to createContext hook */} 
-      <Routes>
-        {user ? (
-          <Route path="/" element={<Dashboard  />} />
-        ) : (
-          <Route path="/" element={<Landing />} />
-        )}
-        {/* <Route path='/signup' element={<SignupForm />} /> // import the signup form here */}
-        <Route path="/signup" element={<SignupForm setUser={setUser} />} />
-        <Route path='/signin' element={<SigninForm setUser={setUser} />} />
-      </Routes>
-    </AuthedUserContext.Provider>
+    <main id="main-main">
+      <div className='logo'></div>
+      <AuthedUserContext.Provider value={user}>
+        {/* prop of value={object} to be grabbed by useContext in nested components */}
+        {/* <NavBar user={user} /> */}
+        <NavBar handleSignout={handleSignout} /> {/* pass the logout functionality to the navbar */}
+        {/* user={user} // no longer necessary in NavBar and Dashboard due to createContext hook */}
+        <Routes>
+          {user ? (
+            <Route path="/" element={<Dashboard />} />
+          ) : (
+            <Route path="/" element={<Landing />} />
+          )}
+          {/* <Route path='/signup' element={<SignupForm />} /> // import the signup form here */}
+          <Route path="/signup" element={<SignupForm setUser={setUser} />} />
+          <Route path='/signin' element={<SigninForm setUser={setUser} />} />
+        </Routes>
+      </AuthedUserContext.Provider>
+    </main>
   );
 };
 
