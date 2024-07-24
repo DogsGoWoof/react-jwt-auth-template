@@ -40,3 +40,90 @@
 .read-the-docs {
   color: #888;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: .5rem 1rem;
+  background: linear-gradient(155deg, white 8%, gray 50%);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 .5rem .3rem .5rem;
+  border-radius: 5rem;
+  outline: .5rem outset black;
+}
+
+li:hover {
+  background: linear-gradient(155deg, white 8%, gray 80%);
+  outline: .5rem ridge black;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: green;
+}
+
+input {
+  margin: .5rem 0;
+  padding: .5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+label {
+  margin: 0 .5rem;
+}
+
+div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+button {
+  margin: 0 .5rem;
+  background: radial-gradient(white, gray);
+  color: black;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: .2rem solid white;
+}       
+
+button:hover, button:focus {
+  text-decoration: underline;
+  background: conic-gradient(from -90deg, chartreuse, cyan 65%);
+  cursor: pointer;
+  border: .2rem solid pink;
+}
+
+button:disabled {
+  background: gray;
+  border: .2rem solid gray;
+}
+
+button:disabled:hover {
+  cursor: not-allowed;
+  text-decoration: none;
+  background: gray;
+  border: .2rem solid gray;
+}
+
+.btn-div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+

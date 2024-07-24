@@ -25,7 +25,9 @@ const SigninForm = (props) => {
         e.preventDefault();
         try {
             const user = await authService.signin(formData); // TODO build signin service function
-
+            if (user.error) {
+                throw new Error(user.error);
+            };
             props.setUser(user);
             navigate('/');
         } catch (err) {
@@ -60,7 +62,7 @@ const SigninForm = (props) => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className='btn-div'>
                     <button>Log In</button>
                     <Link to="/">
                         <button>Cancel</button>
