@@ -52,13 +52,15 @@ body {
 }
 
 main#main-main {
-  background: #fff4;
+  background: linear-gradient(#fff4, #fffb);
   padding: 2rem;
   border-radius: 1rem;
+  outline: .5rem solid white;
 }
 
 h1 {
   text-shadow: 0 0 .1rem black;
+  filter: drop-shadow(0 0 .1rem black);
 }
 
 .card {
@@ -85,6 +87,7 @@ li {
   padding: 0 .5rem .3rem .5rem;
   border-radius: 5rem;
   outline: .5rem outset black;
+  filter: drop-shadow(0 0 .1rem black);
 }
 
 li:hover {
@@ -120,6 +123,7 @@ label {
   font-weight: bold;
   cursor: text;
   text-shadow: 0 0 .1rem black;
+  filter: drop-shadow(0 0 .1rem black);
 }
 
 div {
@@ -139,6 +143,7 @@ button {
   font-size: 1rem;
   font-weight: bold;
   border: .2rem groove white;
+  filter: drop-shadow(0 0 .1rem black);
 }       
 
 button:hover, button:focus {
